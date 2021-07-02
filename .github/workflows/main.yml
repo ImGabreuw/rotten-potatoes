@@ -11,7 +11,7 @@ on:
 jobs:
   CI:
     runs-on: ubuntu-latest
-
+    
     steps:
       - uses: actions/checkout@v2
       
@@ -33,7 +33,8 @@ jobs:
   
   CD:
     runs-on: ubuntu-latest
-    
+    needs: [CI]
+      
     steps:
       - uses: actions/checkout@v2
       
